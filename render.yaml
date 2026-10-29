@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: mi-progreso-excel
+    runtime: static
+    buildCommand: "echo Ready"
+    staticPublishPath: .
+    autoDeployTrigger: commit
