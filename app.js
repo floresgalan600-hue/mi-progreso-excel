@@ -65,5 +65,4 @@ const imp=$("#import");if(imp)imp.onchange=async()=>{try{const file=imp.files[0]
 }
 function save(){try{localStorage.setItem("excelPlanWebV1",JSON.stringify(state))}catch{}}
 function updateLive(){const focused=document.activeElement;const field=focused?.dataset?.field;const idx=focused?.dataset?.index;render();if(field){const next=[...document.querySelectorAll('[data-field="'+field+'"]')].find(x=>x.dataset.index===idx);if(next){next.focus({preventScroll:true});}}}
-}
 document.querySelectorAll(".nav").forEach(b=>b.onclick=()=>{view=b.dataset.view;render()});render();
